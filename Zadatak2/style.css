@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Permanent+Marker&display=swap');
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+body{
+    font-size: 18px;
+    max-width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'DM Mono', monospace;
+    background-color: #ebebeb;
+}
+h1, h3{
+    text-align: center;
+}
+h1{
+    color: #fb8500;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 4rem;
+    padding: 0;
+    margin-bottom: 0;
+}
+h3 span{
+    color: #8ecae6;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 900;
+    font-size: 3rem;
+}
+.cell{
+    background-color:#023047;
+    width: 8rem;
+    height: 8rem;
+    color: white;
+    text-align: center;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.table{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(3,auto);
+    position: relative;
+}
+
+/*CELL X */
+.cell.x::before,
+.cell.x::after{
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 7rem;
+    background-color: #8ecae6;
+}
+.cell.x::before{
+    transform: rotate(45deg);
+}
+.cell.x::after{
+    transform: rotate(-45deg);
+}
+
+/*CELL CIRCLE*/
+.cell.circle::before,
+.cell.circle::after{
+    content: "";
+    border: .8rem solid #ffb703;
+    border-radius: 20rem;
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+}
+
+.cell.x,
+.cell.circle{
+    cursor: not-allowed;
+}
+
+/*winning-message*/
+.winning-message{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #023047b2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+}
+
+.winning-message button{
+    font-size: 1.5rem;
+    background-color: #fb8500;
+    border: 1px solid transparent;
+    padding: .5rem .5rem;
+    cursor: pointer;
+    color: white;
+}
+.winning-message button:hover{
+    background-color: white;
+    color: #fb8500;
+}
+.winning-message.show{
+    display: flex;
+}
+
+
