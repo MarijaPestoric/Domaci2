@@ -1,4 +1,4 @@
-let numOfChar = prompt("Unesi broj riječi rečenice koju želiš da ispitaš!");
+let numOfChar = prompt("Unesi broj slova riječi koju želiš da ispitaš!");
 const rectangles = document.querySelector('.rectangles');
 const mainContainer = document.querySelector('.main-container')
 const plusSign = document.querySelectorAll('.add-rectangle');
@@ -98,11 +98,14 @@ function isPalindrome(str){
     if(str.match(regex) || str==" "){
         if(revInput === str){
             result.innerText = "Unijeta riječ je palindrom!"
-            result.style.color ="#e07a5f"
+            result.style.color="#81b29a"
         } else {
             result.innerText = "Unijeta riječ nije palindrom!"
-            result.style.color="#81b29a"
+            result.style.color ="#e07a5f"
         }   
+    } else if(str==="") {
+        result.innerText = "Niste unijeli nijedan karakter, pokušajte ponovo!"
+        result.style.color ="red"
     } else {
         return alert("Moguće je koristiti samo slovne karaktere!")
     }
