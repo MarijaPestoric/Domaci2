@@ -93,8 +93,8 @@ body{
     color: rgba(63, 62, 62, 0.719);
     cursor: pointer;
     position: absolute;
-    left: 82rem;
-    top: 8rem;
+    right: 220px;
+    top: 130px;
     font-size: 1.5rem;
     height: 2rem;
     width: 2rem;
