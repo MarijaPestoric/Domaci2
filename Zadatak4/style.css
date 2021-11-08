@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Lato&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+
+}
+body{
+    font-size: 18px;
+    width: 100%;
+}
+
+.container{
+    position: relative;
+    width: 100vw;
+    margin: 0 auto;
+}
+
+.prev{
+    position: absolute;
+    z-index: 10;
+    top: 16rem;
+    left: 13%;
+}
+
+.next{
+    position: absolute;
+    z-index: 10;
+    top: 16rem;
+    right: 13%;
+}
+
+.navigation-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Amatic SC', cursive;
+    font-size: 3rem;
+    width: 2rem;
+    color: aliceblue;
+    transition-duration: .5s;
+}
+.navigation-button:hover{
+    transform: scale(1.5);
+}
+
+.container img{
+    width: 80vw;
+    height: 70vh;
+}
+
+.place{
+    position: absolute;
+    top: 26rem;
+    color: rgb(97, 85, 85);
+    letter-spacing: 1rem;
+    background-color: rgba(240, 255, 240, 0.671);
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+.slider-container__img{
+    display: none;
+}
+.main{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.fullScreen{
+    display: none;
+    position: fixed;
+    background-color: rgba(63, 62, 62, 0.719);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+}
+.fullScreen.show{
+    display: flex;
+}
+
+#button-exit{
+    background-color: rgba(255, 255, 255, 0.541);
+    border: 1px solid white;
+    color: rgba(63, 62, 62, 0.719);
+    cursor: pointer;
+    position: absolute;
+    left: 82rem;
+    top: 8rem;
+    font-size: 1.5rem;
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+}
+#button-exit:hover{
+    background-color: rgba(255, 255, 255, 0.863);
+}
+
