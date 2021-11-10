@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    max-width: 100vw;
+    background: #035AA6;
+    color: rgb(231, 231, 231);
+    font-family: monospace;
+}
+
+/* DIV CONTAINER */
+
+.container{
+    padding: .2rem 0;
+}
+.title{
+    font-size: 4rem;
+    letter-spacing: 1rem;
+    text-align: center;
+}
+.question{
+    font-size: 2.5rem;
+    text-align: center;
+}
+.answer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: .5rem;
+}
+.choice{
+    margin-right: 1rem;
+}
+.choice-label{
+    padding: 1rem 2.5rem;
+    border: 2px solid whitesmoke;
+    margin: .5rem;
+    background: #F29F05;
+    width: 20rem;
+}
+.choice-label:hover{
+    border: 2px solid #F29F05;
+    box-shadow: 3px 5px #052940;
+    color: white;
+}
+.choice-label.correct{
+    background: #03A63C;
+}
+.choice-label.wrong{
+    background: #F2441D;
+}
+.score-container{
+    display: block;
+    text-align: right;
+    margin-right: 4rem;
+    font-size: 1.5rem;
+    font-family: monospace;
+}
+.hide{
+    display: none;
+}
+
+/* CONTROL BUTTONS */
+.controls-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.animate-btn{
+    font-size: 1.5rem;
+    position: relative;
+    text-align: center;
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.animate-btn span{
+    position: relative;
+    z-index: 2;
+    width: 5rem;
+    height: 3rem;
+    color: white;
+    cursor: pointer;
+}
+.animate-btn:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #F29F05;
+    transition:ease-in-out .6s;
+    box-shadow:  5px 2px 5px white;
+}
+.animate-btn:hover:after{
+    width: 100%;
+}
+.start-container{
+    text-align: center;
+}
+.start-btn{
+    font-size: 3rem;
+    text-align: center;
+    background: #052940;
+    position: relative;
+    top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.next-btn{
+    font-size: 1.5rem;
+}
+
+.check-btn{
+    font-size: 1rem;
+    background: #052940;
+    padding: .5rem; 
+    width: 7rem;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+.check-btn:hover{
+    border: 2px solid white;
+}

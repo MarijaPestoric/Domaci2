@@ -5,11 +5,11 @@ const container = document.querySelector(".container")
 let index=0;
 
 prev.addEventListener('click', ()=>{
-    changeImg('prev');
+    changeImg('prev', images);
 })
 
 next.addEventListener('click', ()=>{
-    changeImg('next');
+    changeImg('next', images);
 });
 container.addEventListener('mouseenter',()=>{
     document.addEventListener('keydown', keyPress);
@@ -20,29 +20,29 @@ container.addEventListener('mouseleave', ()=>{
 })
  function keyPress(e){
     if(e.key === "ArrowLeft"){
-        changeImg('prev');
+        changeImg('prev', images);
     } else if (e.key === "ArrowRight"){
-        changeImg('next')
+        changeImg('next', images)
     }
  }
 
-function changeImg(direction){
+function changeImg(direction, arr){
     if(direction === 'next'){
         index++;
-        if(index == images.length){
+        if(index == arr.length){
             index = 0;
         }
     } else {
         if(index === 0){
-            index = images.length - 1;
+            index = arr.length - 1;
         } else {
             index--;
         }
     }
-    for(let i=0; i<images.length; i++){
-        images[i].classList.remove('main')
+    for(let i=0; i<arr.length; i++){
+        arr[i].classList.remove('main')
     }
-    images[index].classList.add('main')
+    arr[index].classList.add('main')
 }
 const img = document.querySelectorAll(".slider-image")
 const fullview = document.querySelector(".fullScreen")
