@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Permanent+Marker&display=swap');
+*{
+ box-sizing: border-box;
+}
+body{
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+    background-color: #3d405b;
+    color: #f4f1de;
+    font-family: 'Lato', sans-serif;
+}
+h1{
+    margin-top: 3rem;
+    font-size: 4.5rem;
+    color: #81b29a;
+}
+
+.main-container{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.rectangles{
+    position: relative;
+    margin-bottom: 1rem;
+    margin: 1rem;
+}
+.input-rectangle{
+    width: 4rem;
+    height: 4rem;
+    background-color: #e07a5f;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 3rem;
+    color: #f4f1de;
+}
+
+.delete-rectangle{
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #81b29a;
+    font-family: 'Permanent Marker', cursive;
+}
+.add-rectangle{
+    position: absolute;
+    bottom: 2rem;
+    color: #f2cc8f;
+    cursor: pointer;
+    font-size: 2rem;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.submit-button{
+    background-color: #81b29a;
+    color: #f4f1de;
+    font-size: 1.2rem;
+    padding: .5rem;
+    width: 7rem;
+    margin: 0 auto;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: .3s;
+}
+.submit-button:hover{
+    transform: scale(1.1);
+
+}
+
