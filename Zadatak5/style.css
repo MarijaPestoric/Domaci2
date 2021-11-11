@@ -11,18 +11,20 @@ body{
     font-family: 'Lato', sans-serif;
 }
 .nav-bar{
-    display: flex;
-    justify-content:space-evenly;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
     background-color: rgb(103, 144, 255);
     color: white;
+    width: 100%;
+    text-align: center;
 }
 
 .nav-link{
     list-style: none;
     font-size: 1rem;
     cursor: pointer;
-    padding: .5rem 5rem;
+    padding: 0.5rem 0;
 }
 .nav-link:hover{
     background-color: rgb(62, 62, 252);
@@ -62,4 +64,7 @@ h1{
     font-weight: bold;
     border: 1px solid transparent;
     background-color: whitesmoke;
+}
+.hide{
+    display: none;
 }
