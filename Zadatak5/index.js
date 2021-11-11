@@ -1,3 +1,4 @@
+const title = document.querySelector('.title');
 const buttonElements = document.querySelector('.button');
 const pomodoro = document.querySelector('.pomodoro');
 const shortBreak = document.querySelector('.short-break');
@@ -11,7 +12,7 @@ let timeSecond= 25*60;
 let timeShort = 5*60;
 let timeLong = 10*60;
 let stoppedTime;
-
+displayTime(timeSecond);
 pomodoro.addEventListener('click', ()=>{
     clearInterval(countDown);
     startTimer(stoppedTime);
@@ -46,6 +47,7 @@ function stopTimer(){
 }
 
 function startTimer(second){
+    title.nextElementSibling.href = "./images/stopwatch2.png";
     startBtn.classList.add('hide')
     countDown = setInterval(()=>{
         second--;
@@ -62,6 +64,7 @@ function displayTime(second){
     const min = Math.floor(second/60);
     const sec = Math.floor(second % 60);
     time.innerHTML = `${min<10 ? '0': ''}${min}:${sec<10? '0': ''}${sec}`;
+    title.textContent = `(${time.innerHTML}) Pomodoro Clock`;
 }
 
 
