@@ -32,6 +32,7 @@ startBtn.addEventListener('click', ()=>{
 });
 stopBtn.addEventListener('click', stopTimer);
 resetBtn.addEventListener('click', ()=>{
+    stopTimer();
     timeSecond = 25*60;
     displayTime(timeSecond);
     startBtn.classList.remove('hide');
