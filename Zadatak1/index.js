@@ -1,11 +1,12 @@
 var form = document.getElementById("addForm");
 var itemList = document.getElementById("items");
 var filter = document.getElementById("filter");
+const searchElement = document.querySelector('.search-container');
+const list = document.querySelector('.list')
 
 form.addEventListener("submit", addItem);
 itemList.addEventListener("click", removeItem);
-filter.addEventListener("keyup", filterItems);
-
+filter.addEventListener("keypress", filterItems);
 // Add item
 function addItem(e) {
   e.preventDefault();
@@ -30,16 +31,28 @@ function removeItem(e) {
   }
 }
 
-// Filter items
+//Filter items
 function filterItems(e) {
   var text = e.target.value.toLowerCase();
-  var items = itemList.getElementsByTagName("li");
+  var items = itemList.getElementsByTagName("li");  
+  let label = document.createElement('label');
   Array.from(items).forEach(function(item) {
     var itemName = item.firstChild.textContent;
     if (itemName.toLowerCase().indexOf(text) != -1) {
+      label.className = 'search-label';
+      let textNode = document.createTextNode(itemName);
+      label.appendChild(textNode);
       item.style.display = "block";
     } else {
       item.style.display = "none";
     }
-  });
+  }); 
+  searchElement.appendChild(label);
+  label.addEventListener('click', ()=>{
+    filter.value = label.textContent;
+   });
 }
+
+
+
+

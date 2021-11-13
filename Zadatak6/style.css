@@ -1,4 +1,4 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');*{
     box-sizing: border-box;
 }
 body{
@@ -20,6 +20,7 @@ body{
     font-size: 4rem;
     letter-spacing: 1rem;
     text-align: center;
+    font-family: 'Henny Penny', cursive;
 }
 .question{
     font-size: 2.5rem;

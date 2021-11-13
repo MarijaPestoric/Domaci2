@@ -1,0 +1,23 @@
+.search-label{
+    background: white !important;
+    width: 100% !important;
+    border: 1px solid gray !important;
+    font-size: 18px !important;
+    color: black !important;
+    padding: 0 2% !important;
+    margin: 0;
+    display: block !important;
+}
+
+.search-label:hover{
+    background: rgb(49, 146, 49) !important;
+    color: white !important;
+}
+.select{
+    background: rgb(49, 146, 49) !important;
+    color: white !important;
+}
+
+.hide{
+    display: none;
+}

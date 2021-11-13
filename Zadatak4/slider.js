@@ -57,4 +57,16 @@ exit.addEventListener('click', ()=>{
 function fullImage(){
     fullview.firstElementChild.src = img[index].src;
     fullview.classList.add('show');
+    // const fullImages = document.querySelectorAll('.full-image');
+    // console.log(fullImages);
+    // fullview.addEventListener('mouseenter',()=>{
+    //     console.log('here');
+    //     document.addEventListener('keydown', (e)=>{
+    //         if(e.key === "ArrowLeft"){
+    //             changeImg('prev', fullImages);
+    //         } else if (e.key === "ArrowRight"){
+    //             changeImg('next', fullImages)
+    //         }
+    //     });
+    // })
 }
