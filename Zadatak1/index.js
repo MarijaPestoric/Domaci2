@@ -53,6 +53,13 @@ function filterItems(e) {
    });
 }
 
+//Cookies
+function setCookie(cName, cValue, exDays) {
+  const date = new Date();
+  date.setTime(date.getTime() + (exDays*24*60*60*1000));
+  let expires = "expires="+ date.toUTCString();
+  document.cookie = cName + "=" + cValue + ";" + expires + ";path=/";
+}
 
 
 
